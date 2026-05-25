@@ -2,17 +2,18 @@
 
 ## The concept
 
-Three concrete stack-layer enforcers that are staged for promotion (per [09_elevation_protocol/](../09_elevation_protocol/)) and ready to lift into any Python+SQLite project. Each pattern has project-layer seed evidence, a fix shape, and an implementation sketch.
+Concrete stack-layer enforcers that are staged for promotion (per [09_elevation_protocol/](../09_elevation_protocol/)) and ready to lift. Most are universal within their layer; one is **conditional** (see [09_elevation_protocol/doctrine/conditional_doctrine.md](../09_elevation_protocol/doctrine/conditional_doctrine.md)) — applies only under named conditions and is informational otherwise. Each pattern has project-layer seed evidence, a fix shape, and an implementation sketch.
 
-These are presented as **worked examples** — concrete instances of how stack-layer enforcers look when you adopt the patterns in this kit. If you're building a Python+SQLite project, these three are immediately applicable; if you're on a different stack, the *shape* of how the enforcer is structured may transplant even if the specifics don't.
+These are presented as **worked examples** — concrete instances of how stack-layer enforcers look when you adopt the patterns in this kit. If you're building a Python+SQLite project, these are immediately applicable when their conditions hold; if you're on a different stack, the *shape* of how the enforcer is structured may transplant even if the specifics don't.
 
 ## What's in this directory
 
-| File | Pattern | Why it matters for agent-governed systems |
-|---|---|---|
-| [static_coupling_invariants.md](static_coupling_invariants.md) | CI tests that catch when cross-file references don't resolve (HTML ↔ JS ↔ server, JSON ↔ Python, etc.) | A class of bugs that produces zero server-side exception; agents may not notice them because no error fires |
-| [git_lock_coordination.md](git_lock_coordination.md) | Wrapper for background processes touching git, with explicit acquire/release and orphan-lock watchdog | Multi-agent systems where multiple processes touch git concurrently will eventually orphan `.git/index.lock` |
-| [reflective_freshness_audit.md](reflective_freshness_audit.md) | Reconciliation pass that runs before consumers act on reflective surfaces; surfaces claims that have been falsified by substrate changes | "Artifacts of truth exist; nothing forces downstream readers to consult them at the moment of use" — directly applicable to per-proposal reviewers |
+| File | Pattern | Universal/Conditional | Why it matters |
+|---|---|---|---|
+| [static_coupling_invariants.md](static_coupling_invariants.md) | CI tests that catch when cross-file references don't resolve (HTML ↔ JS ↔ server, JSON ↔ Python, etc.) | Universal (for projects with the relevant coupling shape) | A class of bugs that produces zero server-side exception; agents may not notice them because no error fires |
+| [git_lock_coordination.md](git_lock_coordination.md) | Wrapper for background processes touching git, with explicit acquire/release and orphan-lock watchdog | Universal (for projects with background processes touching git) | Multi-agent systems where multiple processes touch git concurrently will eventually orphan `.git/index.lock` |
+| [reflective_freshness_audit.md](reflective_freshness_audit.md) | Reconciliation pass that runs before consumers act on reflective surfaces; surfaces claims that have been falsified by substrate changes | Universal | *"Artifacts of truth exist; nothing forces downstream readers to consult them at the moment of use"* — directly applicable to per-proposal reviewers |
+| [sandbox_vs_host_routing.md](sandbox_vs_host_routing.md) | Buffer-and-handoff routing rule when sandboxed agents share host-resident state with host-resident agents | **Conditional** — applies when multi-runtime sharing host state | First conditional-doctrine instance in the kit; informs rather than enforces in single-runtime configurations |
 
 ## Why these three specifically
 

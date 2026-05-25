@@ -2,7 +2,7 @@
 
 These are not concepts. They're **stances** — frames for *how* the rest of the kit should be received and adopted. Each is a one-page principle that reshapes how you think about the operational layers below it.
 
-The four stances:
+The five stances:
 
 | File | What it does |
 |---|---|
@@ -10,12 +10,13 @@ The four stances:
 | [patterns_local_enforcers_home.md](patterns_local_enforcers_home.md) | The companion principle to the above. Project-side pattern records and stack-side enforcers carry different work and cite each other. |
 | [hypothesis_posture.md](hypothesis_posture.md) | Closes the gap between static doctrine and evolving substrate. Doctrine is the corpus's *current best understanding* with a falsification condition, not authority text. Matters more under AI authorship than human-only. |
 | [three_layer_architecture.md](three_layer_architecture.md) | The structural model the rest of the kit derives from: universal foundations → stack-shape patterns → project-specific rules. Lessons promote to the right layer based on evidence. |
+| [user_is_a_participant.md](user_is_a_participant.md) | The user is one row in the participant registry, not architecturally a supervisor. Enables leveraged effort among agents (the axe-head-and-handle framing). Scales the protocol uniformly as the agent population grows. |
 
 ---
 
 ## Read these first
 
-Every concept directory in this kit (`01_foundations/` through `11_ai_dependency_tracking/`) is grounded in these four stances. Concepts in isolation read as features; the stances reframe them as integrated parts of a self-improving system.
+Every concept directory in this kit (`01_foundations/` through `13_safe_code_modification/`) is grounded in these five stances. Concepts in isolation read as features; the stances reframe them as integrated parts of a self-improving system.
 
 If you're going to adopt anything from this kit, adopt the stances first. The schemas and enforcers in later directories assume you've already framed your project as something that:
 
@@ -23,6 +24,7 @@ If you're going to adopt anything from this kit, adopt the stances first. The sc
 2. Distinguishes patterns from enforcers (so the pattern library and architecture invariant tests have their natural homes)
 3. Holds doctrine as hypothesis (so doctrine entries are written with falsification conditions and anchor histories)
 4. Has explicit doctrine layers (so the cross-references in later directories make sense)
+5. Treats the user as a participant rather than a supervisor (so the message/edge/vote protocol is uniform across user and agents, and the system can scale to N agents without special-casing the user)
 
 Without these stances, the operational pieces still work in isolation but they don't compose into the system the kit describes.
 

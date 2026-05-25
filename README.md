@@ -26,6 +26,7 @@ Each directory is one concept. Each is self-contained: a `README.md` orients you
 | [11_ai_dependency_tracking/](11_ai_dependency_tracking/) | Per-rule notes recording AI-behavior dependencies + model versions validated against + falsification + fallback. Closes the silent-model-upgrade gap. | cross-cutting | 3 |
 | [12_ingestion_protocol/](12_ingestion_protocol/) | Five-step process for incorporating external artifacts (other projects, papers, libraries) into the kit while preserving structural integrity and recording honest provenance. Includes two worked cases (PrizmForge and MultiAgent). | cross-layer | 5 |
 | [13_safe_code_modification/](13_safe_code_modification/) | Line-GUID editing + content-hash optimistic concurrency + post-write invalidation. Ingested from PrizmForge per 12's protocol. Addresses line-number drift and concurrent overwrite — failure modes agent-modified codebases hit at higher intensity than single-author. | stack | 4 |
+| [14_thought_corpus_graph/](14_thought_corpus_graph/) | Typed-edge reasoning over a persistent message + paragraph corpus. Twelve edge types with schema-enforced rationale on the structural ones. PrizmForge-inspired thought-UID lineage so idea-identity survives supersession. Engagement-floor deprecation. Ingested from MultiAgent. | stack | 4 |
 
 ---
 
@@ -35,7 +36,7 @@ Each directory is one concept. Each is self-contained: a `README.md` orients you
 
 **To adopt one concept:** read that directory's README, then copy the schema/doctrine/enforcer files into the corresponding locations in your project (your migrations dir, your governance docs, your tests dir). Adapt naming to your project; the structure transplants directly. Each file states inline what it depends on and what it expects.
 
-**To adopt the whole stack:** read [BACKGROUND.md](BACKGROUND.md) for the full narrative of how the pieces compose (originally written as a long-form proposal to a specific project, but the framing applies generally). Then walk the concept directories in order — 00 → 13 — building toward integration.
+**To adopt the whole stack:** read [BACKGROUND.md](BACKGROUND.md) for the full narrative of how the pieces compose (originally written as a long-form proposal to a specific project, but the framing applies generally). Then walk the concept directories in order — 00 → 14 — building toward integration.
 
 **To extend:** the elevation protocol ([09_elevation_protocol/](09_elevation_protocol/)) describes how new patterns earn promotion from project-layer sighting to stack-layer enforcer. The ingestion protocol ([12_ingestion_protocol/](12_ingestion_protocol/)) describes how external artifacts (other projects, papers) get broken down and incorporated. Together they cover both internally-surfaced and externally-sourced additions to the kit.
 
