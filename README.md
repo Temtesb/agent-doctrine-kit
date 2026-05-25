@@ -24,7 +24,8 @@ Each directory is one concept. Each is self-contained: a `README.md` orients you
 | [09_elevation_protocol/](09_elevation_protocol/) | How patterns climb layers based on evidence — multi-project triangulation, anti-collinearity discipline, demotion as a real operation | cross-layer | 3 |
 | [10_followups_patterns/](10_followups_patterns/) | Three stack-layer enforcers ready to lift: static-coupling invariants, background-process git-lock coordination, reflective-layer freshness audit | stack | 4 |
 | [11_ai_dependency_tracking/](11_ai_dependency_tracking/) | Per-rule notes recording AI-behavior dependencies + model versions validated against + falsification + fallback. Closes the silent-model-upgrade gap. | cross-cutting | 3 |
-| [12_ingestion_protocol/](12_ingestion_protocol/) | Five-step process for incorporating external artifacts (other projects, papers, libraries) into the kit while preserving structural integrity and recording honest provenance. Includes a worked first case. | cross-layer | 4 |
+| [12_ingestion_protocol/](12_ingestion_protocol/) | Five-step process for incorporating external artifacts (other projects, papers, libraries) into the kit while preserving structural integrity and recording honest provenance. Includes two worked cases (PrizmForge and MultiAgent). | cross-layer | 5 |
+| [13_safe_code_modification/](13_safe_code_modification/) | Line-GUID editing + content-hash optimistic concurrency + post-write invalidation. Ingested from PrizmForge per 12's protocol. Addresses line-number drift and concurrent overwrite — failure modes agent-modified codebases hit at higher intensity than single-author. | stack | 4 |
 
 ---
 
@@ -34,7 +35,7 @@ Each directory is one concept. Each is self-contained: a `README.md` orients you
 
 **To adopt one concept:** read that directory's README, then copy the schema/doctrine/enforcer files into the corresponding locations in your project (your migrations dir, your governance docs, your tests dir). Adapt naming to your project; the structure transplants directly. Each file states inline what it depends on and what it expects.
 
-**To adopt the whole stack:** read [BACKGROUND.md](BACKGROUND.md) for the full narrative of how the pieces compose (originally written as a long-form proposal to a specific project, but the framing applies generally). Then walk the concept directories in order — 00 → 12 — building toward integration.
+**To adopt the whole stack:** read [BACKGROUND.md](BACKGROUND.md) for the full narrative of how the pieces compose (originally written as a long-form proposal to a specific project, but the framing applies generally). Then walk the concept directories in order — 00 → 13 — building toward integration.
 
 **To extend:** the elevation protocol ([09_elevation_protocol/](09_elevation_protocol/)) describes how new patterns earn promotion from project-layer sighting to stack-layer enforcer. The ingestion protocol ([12_ingestion_protocol/](12_ingestion_protocol/)) describes how external artifacts (other projects, papers) get broken down and incorporated. Together they cover both internally-surfaced and externally-sourced additions to the kit.
 
